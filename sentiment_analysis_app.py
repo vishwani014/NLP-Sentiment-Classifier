@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -8,9 +9,14 @@ import re
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-nltk.download('vader_lexicon')
-nltk.download('punkt')
-nltk.download('stopwords')
+# Set up nltk data directory
+nltk_data_dir = os.path.join(os.path.expanduser("~"), "nltk_data")
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
+
+nltk.download('punkt', download_dir=nltk_data_dir)
+nltk.download('stopwords', download_dir=nltk_data_dir)
+nltk.download('vader_lexicon', download_dir=nltk_data_dir)
 
 # Data cleaning & preprocessing
 def clean_text(text):
