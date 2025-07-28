@@ -10,6 +10,7 @@ import seaborn as sns
 
 nltk.download('vader_lexicon')
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 # Data cleaning & preprocessing
