@@ -55,6 +55,15 @@ def main():
             .positive {background-color: #d4edda; color: #155724;}
             .negative {background-color: #f8d7da; color: #721c24;}
             .neutral {background-color: #e2e3e5; color: #383d41;}
+            h2 {
+            color: #2c3e50 !important;
+            }
+            h3 {
+                color: #2c3e50 !important;
+            }
+            .stMarkdown p {
+            color: #2c3e50 !important;
+        }
         </style>
     """, unsafe_allow_html=True)
 
